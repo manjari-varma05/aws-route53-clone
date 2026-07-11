@@ -5,19 +5,34 @@ from routers import auth
 from routers import hosted_zones
 from routers import dns_records
 
-app = FastAPI()
+app = FastAPI(
+    title="AWS Route53 Clone API",
+    version="1.0.0"
+)
 
+# CORS Configuration
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
         "http://127.0.0.1:3000",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://aws-route53-clone-10.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# Routers
 app.include_router(auth.router)
 app.include_router(hosted_zones.router)
 app.include_router(dns_records.router)
+
+
+@app.get("/")
+def root():
+    return {
+        "message": "AWS Route53 Clone Backend is running!"
+    }
