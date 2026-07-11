@@ -1,0 +1,11 @@
+@import "./hostedzones.css";
+.search-filter {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;   /* Add this */
+}
+
+.table-container {
+    margin-top: 10px;      /* Optional */
+}

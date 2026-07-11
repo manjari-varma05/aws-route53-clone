@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    overflow: hidden;
+}
+
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.login-card {
+    width: 500px;
+    background: white;
+    border-radius: 18px;
+    padding: 28px 35px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.logo-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    font-size: 22px;
+    color: #1e293b;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin-bottom: 24px;
+}
+
+.signin-text {
+    text-align: center;
+    font-size: 16px;
+    color: #334155;
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+    margin-top: 16px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 0 14px;
+    font-size: 15px;
+    outline: none;
+    transition: .2s;
+}
+
+input:focus {
+    border-color: #2563eb;
+}
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 45px;
+}
+
+.eye-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 18px 0 22px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.remember input {
+    width: 16px;
+    height: 16px;
+}
+
+.options a {
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.login-btn:hover {
+    background: #1d4ed8;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 22px 0;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid #d1d5db;
+}
+
+.divider span {
+    margin: 0 12px;
+}
+
+.demo-btn {
+    width: 100%;
+    height: 48px;
+    border: 2px solid #2563eb;
+    border-radius: 8px;
+    background: white;
+    color: #2563eb;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.demo-btn:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (max-height: 750px) {
+    body {
+        overflow: auto;
+    }
+
+    .login-container {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .login-card {
+        width: 100%;
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+}
+.login-card h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #1e293b;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
